@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", Montserrat, Lora, sans-serif;
+}
+
+a{
+    text-decoration: none; 
+}
+
+#resultado-clima{
+    padding: 15px;
+    background-color: burlywood;
+    margin: 0 auto;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+  
+}
+/*Estilo de las ventanas emergentes*/
+
+.ventana1,.ventana2{
+    background: rgba(0,0,120,1);
+    width: 30%;
+    color: rgba(255,255,255,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 35%;
+    top: 130%;
+    display: none;
+}
+
+    .ventana1 img, .ventana2 img{
+        width: 50%;
+    }
+
+.ventana3,.ventana4{
+    background: rgba(0,0,120,1);
+    width: 30%;
+    color: rgba(255,255,255,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 35%;
+    top: 180%;
+    display: none;
+}
+
+    .ventana3 img, .ventana4 img{
+    width: 50%;
+    }
+
+#cerrar1, #cerrar2, #cerrar3, #cerrar4{
+    position: absolute;
+    right: 3px;
+    top: 1px;
+}
+
+/*Fin estilo de ventanas emergentes*/
+
+
+
+
+
+
+.padre{
+    display: flex;
+    flex-flow:column nowrap;
+}
+.margen-interno{
+    padding: 0 50px;
+}
+    .header{
+        background: url(../img/vacaciones.jpg);
+        background-position: center; /*que este centrado*/
+        background-attachment: contain; /*que este contenido*/
+        background-size: cover; 
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .menu{
+            background:rgba(0,0,0,.3) ;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,.5);
+        }
+            .logo{
+                flex:1 1 auto;
+            }
+            .logo img{
+                width: 38%;
+            }
+            .nav{
+                flex:5 1 auto; 
+            }
+                .nav a{
+                    color:#fff;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 3px;
+                }
+                .nav a:hover{
+                    color:#343434;
+                }
+            .social{
+                flex:1 1 auto;
+                display: flex;
+
+            }
+                .social a{
+                    font-size: 18px;
+                    color:#fff;
+                    padding: 0 5px;
+                }
+                .social a:hover{
+                    color:#343434;
+                }
+        .texto-principal{
+            background: rgba(76, 76, 230, 0.1);
+            height: 580px;
+            display: flex;
+            align-items: center;
+        }
+            h1{
+                font-family: 'Lora', serif;
+                font-size: 21px;
+                color: #030202;
+                font-weight: 400;
+                text-align: center;
+                line-height: 2.5;
+            }
+    .clima {
+        background: #deb887;
+        display: flex;
+        padding: 5px;
+    }
+        h6{
+            font-family: 'Lora', serif;
+            font-size: 5px;
+            font-weight: 50;
+            text-align: center;
+            text-transform:lowercase;
+            color:#000000;     
+        }
+    .section{
+        background: #F7F7F7;
+        display: flex;
+        padding: 50px;
+    }
+        .articulos{
+            background: #f7f7f7;
+            flex:2 1 auto;
+            display:flex;
+            flex-flow: row wrap;  /*me lo pone abajo si no da el ancho*/
+        }
+        .article {
+            border: 2px solid black;
+            border-radius: 15px;
+            flex: 1 1 40%;
+            color: #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0 0;
+            background: #ececec;
+            overflow: hidden;
+            text-align: center; /* Centrar el contenido dentro del contenedor */
+          }
+          
+          .article p {
+            color: #000;
+          }
+          
+          .article img {
+            width: 100%;
+            height: 68%;
+            object-fit: cover;
+          }
+          
+          .article a {
+            color: #fff;
+            font-size: 13px;
+            padding: 10px;
+            background: #000;
+            margin: 10px 0; /* 10px top and bottom, 0 left and right */
+            display: inline-block;
+          }
+            .article a:hover{
+                background: #546cc3;
+            }
+            h3{
+                color:#fff;
+                font-size: 13px;
+                padding: 10px 0;
+                margin-top: -80px;
+            }
+            h2{
+                color:#000000;
+                text-transform: uppercase; /*en mayuscula*/
+                font-size: 25px;
+                padding: 0px 0 10px 0;  /*up 0 right 0 down 10 left 0 */       
+            }
+            .navegacion{
+                background: #000;
+                flex:1 1 100%;
+                margin: 10px 10px 0 0px;
+            }
+            .navegacion a{
+                color: #fff;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px; 
+            }
+        h4{
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        h5{
+            background: #667584;
+            /*color: #fff;
+            padding: 1px;
+            text-transform: uppercase;*/ 
+
+            display: flex;
+            justify-content: center;
+            margin-top: 1px;
+        }
+        .content {
+            max-width: 600px; /* Establece un ancho máximo para el contenedor */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            padding: 20px; /* Agrega un espacio de relleno alrededor del contenido */
+          }
+
+        .container__form {
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            margin-top: 15px;
+        }
+         
+        .map {
+            max-width: 100%;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            overflow: hidden; }
+
+
+    .retorno{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+        .pie{
+            text-align: center;
+        }
+        .pie a{
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;             
+        }
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+
+/*
+
+Tamaños de pantallas a configurar 
+
+400px a 600px extra small devices (phones 600px and down)
+.650px a 400px small devices (portrait tablets and large phones, 600px and up)
+.850px a 600px medium devices (landscape tablets, 768px and up)
+1000px a 800px large devices (laptos/desktops, 992px and up)
+.1300px a 800px extra large devices (large laptos and desktops, 1200px and up)
+
+*/
+
+@media (min-width: 851px) and (max-width: 1300px) {
+	.section{
+		flex-direction: column;
+        /*height: auto;*/
+    }
+    .articulos{
+        flex-direction: row;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .menu{
+        height: auto;
+        .nav a{ font-size: 10px;}
+    }
+    h1{
+        font-size: 13px;
+    }
+    h6{
+        font-size: 1px;
+    }
+    .texto-principal{
+        height: 450px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 850px) {
+    h1{
+        font-size: 12px;
+    }
+    .clima {
+        flex-direction: column;
+        display:inline-block;
+    }
+        h6{
+            font-size:2px;     
+        }
+    .section{
+		flex-direction: column;
+    }
+    .articulos{
+        flex-direction: column;
+    }
+    .menu{
+        height: auto;
+        .nav a{ font-size: 8px;}
+    }
+    .logo img{
+        width: 20%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 650px) {
+    h1{
+        font-size: 10px;
+    }
+    .clima {
+        flex-direction: column;
+        display:inline-block;
+    }
+        h6{
+            font-size:2px;     
+        }
+    .section{
+		flex-direction: column;
+    }
+    .articulos{
+        flex-direction: column;
+        height: auto;
+    }
+    .menu{
+        .off { display: none;}
+        .nav a{ font-size: 25px;} 
+    }
+}

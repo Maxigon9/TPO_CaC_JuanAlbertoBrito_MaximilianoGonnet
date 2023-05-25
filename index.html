@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inclusion de Favicon-->
+  <link rel="shortcut icon" href="img/icono4.ico" type="image/x-icon">
+
+  <!-- Animacion AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Inclusion de Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+  crossorigin="anonymous"></script>
+
+    <!-- APIrest-->
+
+    <script defer src="https://maps.googleapis.com/maps/api/js?"></script>
+
+  
+  <!-- Inclusion de Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  
+  <!-- Inclusion de CSS  -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/fontawesome.min.css">    SACARLO DESPUES -->
+
+
+  <!-- <link rel="stylesheet" href=""https://use.fontawesome.com/releases/v6.3.0/js/all.js""> -->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Inclusion de javascript -->
+  <script src="js/script.js"></script>
+
+
+  <title> viajARG </title>
+
+</head>
+
+<body>
+  <a name="start"></a>
+  <div class="padre">
+
+    <header class="header">
+      <div class="menu margen-interno">
+        <div class="logo">
+          <a><img src="img/logo2.png" alt="viajARG"></a> 
+        </div>
+        <nav class="nav"> <!-- Navigation-->
+          <a href="#inicio"><i class="fa-solid fa-house"></i><span class="off"><strong> INICIO</strong></span></a>
+          <a href="#nosotros"><i class="fa-solid fa-user"></i><span class="off"><strong> NOSOTROS</strong></span></a>
+          <a href="#services"><i class="fa-solid fa-comments"></i><span class="off"><strong> SERVICIOS</strong></span></a>
+          <a href="#contacto"><i class="fa-solid fa-envelope"></i><span class="off"><strong> CONTACTO</strong></span></a>
+          <a href="#ubicacion"><i class="fa-solid fa-street-view"></i><span class="off"><strong> LOCAL</strong></span></a>
+        </nav> 
+        <div class="social">
+          <div><a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></div>
+          <div><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+          <div><a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>       
+        </div>
+      </div>
+      <div class="texto-principal margen-interno">
+        <h1><strong>¡Bienvenido a ViajARG! <br>
+        
+          ¿Pensando en escaparte?....Descubre los destinos más fascinantes de Argentina y sumérgete en aventuras inolvidables. Desde la majestuosidad de las cataratas del Iguazú hasta la imponente belleza de la Patagonia, en ViajARG te ofrecemos experiencias únicas que te conectarán con la naturaleza, la cultura y la historia de nuestro país.
+          
+          Explora nuestras rutas temáticas, diseñadas para satisfacer todos tus intereses y pasiones. 
+          
+          Nuestro equipo de expertos en viajes está aquí para ayudarte a planificar tu próxima aventura. Con conocimiento local y pasión por los detalles, te brindaremos recomendaciones personalizadas y consejos prácticos para que tu viaje sea inolvidable.
+          
+          No esperes más, ¡comienza a explorar Argentina con ViajARG y crea recuerdos para toda la vida!</strong></h1>
+      </div>
+    </header>
+
+    <a name="services"></a>
+    <div class="clima margen-interno">
+      <h6 id="resultado-clima" > </h6>
+    </div>
+    <section class="section margen-interno">
+      <div class="articulos">
+        <!-- Aca iria por ejemplo un primer viaje, apretando el boton se abre ventana -->
+        <div class="ventana1" id="vent1">
+          <div id="cerrar1"><a href="javascript:cerrar1()"><img src="img/cerrar.png"></a></div>
+          <img src="img/cataratas.jpg" alt="destino1">
+          <p>Cataratas del Iguazu <br> Sumérgete en la exuberancia de las Cataratas del Iguazú, un paraíso de cascadas imponentes y exótica vegetación. Déjate envolver por la música ensordecedora del agua mientras contemplas el increíble espectáculo de la naturaleza. Explora los senderos que te llevan a miradores impresionantes y siente la bruma refrescante en tu rostro. Descubre la magia de las Cataratas del Iguazú y déjate cautivar por su belleza indomable. ¡Un destino que te dejará sin palabras!
+          </p>          
+        </div>
+        
+        <article class="article">
+          <img src="img/cataratas.jpg" alt="destino1">
+
+          <h2>Cataratas del Iguazu</h2>
+          <p>Sumérgete en la exuberancia de las Cataratas del Iguazú...</p>
+          <a href="javascript:abrir1()">Leer mas...</a>
+          <a href="#resultado-clima" onclick="obtenerClima('Misiones')">Obtener clima</a>
+        </article>
+        
+
+        <!-- Aca iria por ejemplo un segundo viaje, apretando el boton se abre ventana -->
+        <div class="ventana2" id="vent2">
+          <div id="cerrar2"><a href="javascript:cerrar2()"> <img src="img/cerrar.png"></a></div>
+          <img src="img/glaciar.webp" alt="destino2">
+          <p>Glaciar Perito Moreno <br> Descubre la majestuosidad del Glaciar Perito Moreno, una maravilla natural que te dejará sin aliento. Admira su imponente masa de hielo, sus deslumbrantes tonalidades azuladas y el estallido de los desprendimientos. Sumérgete en la belleza glacial y vive una experiencia única en plena Patagonia. ¡Ven y sé testigo de este espectáculo natural inolvidable!
+          </p>
+        </div>
+        <article class="article">
+          <img src="img/glaciar.webp" alt="destino2">
+
+          <h2>Glaciar Perito Moreno</h2>
+          <p>Descubre la majestuosidad del Glaciar Perito Moreno...</p>
+          <a href="javascript:abrir2()">Leer mas...</a>
+          <a href="#resultado-clima" onclick="obtenerClima('Santa Cruz')">Obtener clima</a>
+        </article>
+        
+
+        <!-- Aca iria por ejemplo un tercero viaje, apretando el boton se abre ventana -->
+        <div class="ventana3" id="vent3">
+          <div id="cerrar3"><a href="javascript:cerrar3()"> <img src="img/cerrar.png"></a></div>
+          <img src="img/salinas.jpg" alt="destino3">
+          <p>Salinas Grandes <br> Descubre las Salinas Grandes, un desierto de sal único en su esencia. Su blancura infinita y su paisaje surrealista te cautivarán. Camina sobre su superficie y déjate maravillar por esta maravilla natural. ¡Vive una experiencia inolvidable en las Salinas Grandes!
+          </p>
+        </div>
+        <article class="article">
+          <img src="img/salinas.jpg" alt="destino3">
+
+          <h2>Salinas Grandes</h2>
+          <p>Descubre las Salinas Grandes, un desierto de sal único...</p>
+          <a href="javascript:abrir3()">Leer mas...</a>
+          <a href="#resultado-clima" onclick="obtenerClima('San Salvador de Jujuy')">Obtener clima</a>
+        </article>
+        
+        <!-- Aca iria por ejemplo un cuarto viaje, apretando el boton se abre ventana -->
+        <div class="ventana4" id="vent4">
+          <div id="cerrar4"><a href="javascript:cerrar4()"> <img src="img/cerrar.png"></a></div>
+          <img src="img/cajon1.jpg" alt="destino4">
+          <p>Cajón del Azul <br> Sumérgete en la belleza del Cajón del Azul, un paraíso escondido entre montañas. Déjate llevar por el sonido del agua cristalina mientras exploras sus senderos naturales. Contempla la majestuosidad de sus cascadas y maravíllate con sus paisajes de ensueño. Vive una aventura única en el Cajón del Azul y descubre la magia de la naturaleza en su máxima expresión.
+          </p>
+        </div>
+
+        <article class="article">
+          <img src="img/cajon1.jpg" alt="destino4">
+
+          <h2>Cajón Del Azul</h2>
+          <p>Sumérgete en la belleza del Cajón del Azul, un paraíso...</p>
+          <a href="javascript:abrir4()">Leer mas...</a>
+          <a href="#resultado-clima" onclick="obtenerClima('El Bolsón')">Obtener clima</a>
+        </article>
+             
+        
+      </div>
+      
+    </section>
+    
+    <section class="section margen-interno">
+
+    <div class="content">
+      <a name="nosotros"></a>
+      <h4>Sobre Nosotros</h4>
+      <p >Bienvenidos a viajARG, una empresa de viajes dedicada a brindarte experiencias inolvidables. 
+
+        En viajARG, nos esforzamos por ofrecerte los destinos más emocionantes y fascinantes. 
+        
+        Nuestro equipo de expertos en viajes está comprometido en brindarte un servicio personalizado y adaptado a tus necesidades. 
+        
+        Descubre destinos asombrosos, sumérgete en nuevas culturas y crea recuerdos que durarán toda la vida. En viajARG, nos encargamos de cada detalle para que puedas disfrutar al máximo de tus aventuras. ¡Únete a nosotros y comienza a explorar el mundo con viajARG!
+        
+        ¡Tu próxima gran aventura te espera! Contáctanos hoy mismo y permítenos ser tu guía en el maravilloso mundo de los viajes.
+      </p>
+    </div>
+    
+    
+    <div class="container__form" id="container__form" data-aos="flip-right">
+      <a name="contacto"></a>
+      <h4>Formulario de  contacto</h4>
+      <form class="row g-3 mt-3 contact__form" onsubmit="return validarFormulario();">
+        <div class="col-lg-4 col-md-6">
+          <label for="nombre" class="form-label text-dark">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+        </div>
+        
+            <div class="col-lg-4 col-md-6">
+                <label for="email" class="form-label text-dark">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Tu email">
+            </div>
+    
+            <div class="col-lg-4 col-md-6">
+                <label for="ciudad" class="form-label text-dark">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="Tu ciudad">
+            </div>
+    
+            <div class="col-lg-7">
+                <label for="direccion" class="form-label text-dark">Direccion</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Escribe tu direccion">
+            </div>
+    
+            <div class="col-lg-5">
+                <label for="codigoPostal" class="form-label text-dark">Codigo postal</label>
+                <input type="text" class="form-control" id="codigoPostal" placeholder="Escribe tu codigo postal">
+            </div>
+    
+            <div class="col-12">
+                <label for="mensaje" class="form-label text-dark">Envianos un mensaje</label>
+                <input type="text" class="form-control" id="mensaje" placeholder="Escribe tu mensaje">
+            </div>
+    
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary d-block mx-auto">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    </section> 
+    <div>
+      <a name="ubicacion"></a>
+      <h5>Nos encontramos en</h5>
+    </div> 
+
+    <section class="section margen-interno">
+
+
+    <div class="map" data-aos="fade-right">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.685670600826!2d-62.27779468488107!3d-38.70206399316257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95edbb5a96a30e7b%3A0xb1b49985ebe2f46e!2sCMA%2C%20Zapiola%201310%2C%20B8000%20Bah%C3%ADa%20Blanca%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1675276216439!5m2!1ses!2sar"
+        width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+    </section>
+    
+    <a href="#start" class="retorno">Volver arriba</a>
+
+
+    <footer class="footer margen-interno">
+      <nav class="pie"> <!-- Navigation-->
+        <a href="https://buenosaires.gob.ar/educacion/codocodo/el-programa" target="blank_">Desarrollado en CaC</a>
+      </nav> 
+    </footer>
+    
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init({ easing: 'ease-out-back', duration: 2000 });</script>
+
+</body>
+</html>
