@@ -61,7 +61,7 @@ function validarFormulario() {
 
   function obtenerClima(destino) {
     const apiKey = 'e7f04484676fee8a8f39abaf5879c011';
-    const endpoint = `http://api.openweathermap.org/data/2.5/weather?q=${destino},Argentina&appid=${apiKey}`;
+    const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${destino},Argentina&appid=${apiKey}`;
     const url = new URL(endpoint);
 
     fetch(url)
